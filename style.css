@@ -1,0 +1,96 @@
+/* Make body take full screen */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Full-page video background */
+#bg-video {
+  position: fixed;      /* fixed so it stays behind content */
+  top: 0;
+  left: 0;
+  width: 100%;          /* full width */
+  height: 100%;         /* full height */
+  object-fit: cover;    /* fill screen nicely without stretching */
+  z-index: -1;          /* behind everything */
+  filter: blur(0px) brightness(0.6); /* optional blur + darken */
+}
+
+
+.glow {
+  font-size: 60px;
+  color: #06e6da;
+  text-shadow: 
+    0 0 5px #6a6b6b,
+    0 0 10px #00ffc8,
+    0 0 15px #201f1f,
+    0 0 20px #00fff2;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.p {
+  color: rgb(25, 255, 4);
+  text-shadow: 
+    0 0 5px #6a6b6b,
+    0 0 10px #008011,
+    0 0 15px #201f1f,
+    0 0 20px #006b09;
+  font-family: Impact, sans-serif;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 60px !important;
+  color: #fff !important;
+  text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 15px #ffffff,
+    0 0 50px #ffffff;
+  font-family: Courier New, !important;
+}
+
+a{
+    color: cornflowerblue;
+      text-shadow: 
+    0 0 5px #1900ff,
+    0 0 10px #02bcf5,
+    0 0 15px #1d44f5,
+    0 0 20px #0077ff;
+  font-family: Impact, sans-serif !important;
+}
+
+/* Glow Fade-In Animation */
+@keyframes glowIn {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 2px #ffffff, 0 0 40px #ffffff;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 25px #f8f8f8;
+  }
+}
+
+/* Apply to all text + logo */
+h1, h2, h3, p, dd {
+  animation: glowIn 4s ease-out forwards;
+}
+
+button{
+background-color:gold;
+padding-bottom: 20px ;
+height: 1px;
+width: 60px;
+border-radius: 20px;
+
+}
